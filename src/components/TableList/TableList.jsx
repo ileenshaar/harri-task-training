@@ -17,9 +17,7 @@ function TableList() {
         );
       });
 
-      setTableData(
-        filtered.length > 0 && searchVal !== "" ? filtered : TableDataUnfiltered
-      );
+      setTableData(searchVal !== "" ? filtered : TableDataUnfiltered);
     }, 300);
     return () => clearTimeout(handler); //useEffect can return a cleanup function.it expects a (function) to be returned,
   }, [searchVal]);
@@ -35,7 +33,7 @@ function TableList() {
       <table>
         <thead>
           <tr>
-            {Object.keys(TableData[0]).map((key, index) => {
+            {Object.keys(TableDataUnfiltered[0]).map((key, index) => {
               //Object.keys:return array of keys //mao works because react expects An array of JSX which map returns but foreach does not return anything (undefined)
               return <th key={index}>{key}</th>;
             })}
@@ -43,13 +41,14 @@ function TableList() {
         </thead>
 
         <tbody>
-          {TableData.map((entry, index) => (
-            <tr className="tableData" key={index}>
-              {Object.values(entry).map((key, i) => (
-                <td key={i}>{key}</td>
-              ))}
-            </tr>
-          ))}
+          {TableData.length > 0 &&
+            TableData.map((entry, index) => (
+              <tr className="tableData" key={index}>
+                {Object.values(entry).map((key, i) => (
+                  <td key={i}>{key}</td>
+                ))}
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
