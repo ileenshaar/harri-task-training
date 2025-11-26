@@ -1,0 +1,32 @@
+.tableListContainer {
+  max-width: 70%; /* responsive: adjusts to screen */
+  margin: 50px auto;
+  overflow-x: auto; /* scroll if table too wide */
+  font-family: Arial, sans-serif;
+}
+
+.tableListContainer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  table-layout: fixed; /* equal width columns */
+}
+
+.tableListContainer td,
+.tableListContainer th {
+  text-align: center;
+  border: 1px solid gray;
+  word-wrap: break-word; /* wrap long text */
+}
+
+.tableListContainer th {
+  background-color: pink;
+}
+.tableListContainer tr:nth-child(even) {
+  /* even children */
+  background-color: rgba(213, 211, 211, 0.588);
+}
+
+.tableListContainer tr:hover {
+  background-color: rgb(255, 192, 203);
+}
