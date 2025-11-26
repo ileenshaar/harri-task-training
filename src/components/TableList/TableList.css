@@ -7,7 +7,7 @@
 
 .tableListContainer table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /*borders collapse and become one*/
   margin-top: 20px;
   table-layout: fixed; /* equal width columns */
 }
