@@ -1,0 +1,95 @@
+* {
+  /* easiest way to gaurantee that when we specifi width it includes padding mirgin...*/
+  box-sizing: border-box;
+}
+
+.toDoContainer {
+  box-shadow: 0 0 20px black; /* 0:horizontal offset 0:vertical offset 20:blur amount*/
+  width: fit-content;
+  padding: 20px;
+  margin: 100px auto; /*margin : x auto : centers horizontally*/
+  background-color: rgba(255, 192, 203, 0.317);
+  min-height: 300px;
+  max-width: 500px;
+}
+
+.toDoContainer h2 {
+  color: rgb(152, 151, 151);
+}
+
+.inputButton {
+  display: flex;
+  gap: 5px;
+}
+
+.toDoContainer input {
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.208);
+  padding-left: 5px;
+  flex: 1; /* take all empty space*/
+}
+
+.toDoContainer button {
+  height: 30px;
+  width: 70px;
+  border-radius: 10px;
+  border: 2px solid rgb(78, 3, 3);
+  color: rgb(78, 3, 3);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 1px solid transparent;
+}
+
+.toDoContainer input:focus {
+  /*focus (:)*/
+  outline: 1px solid rgba(0, 0, 0, 0.208);
+}
+
+.toDoContainer input:focus::placeholder {
+  /* palceholder (::)*/
+  color: transparent;
+}
+
+.toDoContainer ul {
+  list-style: none; /* the bullets/circles...*/
+  padding: 0;
+  list-style-position: outside; /* put bullets out of padding*/
+}
+
+.toDoContainer li {
+  font-size: 25px;
+  color: rgb(78, 3, 3);
+  font-weight: bold;
+  word-wrap: break-word; /*how to break long sentence*/
+  white-space: normal;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/*
+لف النص بدون تقطيع كلمات	word-break: normal
+لفّ النص عند الضرورة فقط	overflow-wrap: break-word
+منع اللفّ كلياً	white-space: nowrap
+السماح بتقطيع الكلمات	word-break: break-all
+إخفاء النص الزايد بوضع (…)	text-overflow: ellipsis*/
+
+/*النص يلفّ بس من الفراغات فقط وبس بكسر الكلمة عند الضرورة
+ white-space: normal;
+word-break: normal;
+overflow-wrap: break-word;
+*/
+
+/*ellipsis
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+*/
+
+/*multi-line ellipsis
+display: -webkit-box;
+-webkit-line-clamp: 2; // عدد الأسطر 
+-webkit-box-orient: vertical;
+overflow: hidden;
+*/
