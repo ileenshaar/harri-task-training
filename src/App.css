@@ -1,0 +1,12 @@
+html,
+body,
+#root,
+.App {
+  /* قد يختلف اسم الـ App */
+  /* تأكدي من عدم وجود هذا: height: 100vh; */
+  /* واستخدمي هذا بدلاً منه: */
+  min-height: 100vh;
+  height: auto; /* مهم جداً */
+  margin: 0;
+  padding: 0;
+}

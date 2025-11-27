@@ -1,0 +1,47 @@
+.cardsGrid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.cardsGrid img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* aspect-ratio هي خاصية CSS حديثة وقوية جداً. بدلاً من الاعتماد على ارتفاع الأب، فإنها تعتمد على عرض العنصر نفسه، وهو دائماً محدد بفضل الـ width: 100% الخاص بكِ.
+عندما تحددين aspect-ratio: 4 / 3; (أي 4 وحدات عرض مقابل 3 وحدات ارتفاع)*/
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.cardsGrid p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card button {
+  max-width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .cardsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
