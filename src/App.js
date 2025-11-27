@@ -4,6 +4,7 @@ import TableList from "./components/TableList/TableList";
 import Counter from "./components/Counter/Counter";
 import CardsGrid from "./components/CardsGrid/CardsGrid";
 import HorizontalScroll from "./components/HorizontalScroll/HorizontalScroll";
+import Modal from "./components/Modal/Modal";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Counter />
       <CardsGrid />
       <HorizontalScroll />
+      <Modal />
     </div>
   );
 }
