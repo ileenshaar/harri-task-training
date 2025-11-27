@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.HorizontalScroll {
+  display: flex;
+  overflow-x: scroll;
+  /* white-space: nowrap; not needed if display flex*/
+  overflow-y: hidden; /* hide y scrollbar */
+  gap: 20px;
+}
+
+.HorizontalScroll img {
+  /* Prevent images from shrinking into smaller spaces */
+  flex-shrink: 0;
+
+  /* Calculate the correct width for exactly 10 images */
+  /* We have 10 images and 9 gaps (20px each). Total gap space = 180px */
+  /* (100% of container width - total gap width) / 10 images */
+  width: calc((100% - 180px) / 10);
+
+  /* Make sure images maintain aspect ratio */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.HorizontalScroll img:hover {
+  scale: 1.5;
+}
