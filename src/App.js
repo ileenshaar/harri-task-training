@@ -7,6 +7,7 @@ import HorizontalScroll from "./components/HorizontalScroll/HorizontalScroll";
 import Modal from "./components/Modal/Modal";
 import ApiFetch from "./components/ApiFetch/ApiFetch";
 import FetchUsers from "./components/FetchUsers/FetchUsers";
+import FormValidation from "./components/FormValidation/FormValidation";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <HorizontalScroll />
       <Modal />
       <FetchUsers />
+      <FormValidation />
     </div>
   );
 }
