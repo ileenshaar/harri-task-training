@@ -5,6 +5,8 @@ import Counter from "./components/Counter/Counter";
 import CardsGrid from "./components/CardsGrid/CardsGrid";
 import HorizontalScroll from "./components/HorizontalScroll/HorizontalScroll";
 import Modal from "./components/Modal/Modal";
+import ApiFetch from "./components/ApiFetch/ApiFetch";
+import FetchUsers from "./components/FetchUsers/FetchUsers";
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <CardsGrid />
       <HorizontalScroll />
       <Modal />
+      <FetchUsers />
     </div>
   );
 }
