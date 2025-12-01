@@ -8,19 +8,23 @@ import Modal from "./components/Modal/Modal";
 import ApiFetch from "./components/ApiFetch/ApiFetch";
 import FetchUsers from "./components/FetchUsers/FetchUsers";
 import FormValidation from "./components/FormValidation/FormValidation";
+import ShoppingCard from "./components/ShoppingCard/ShoppingCard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Card from "./components/FormValidation/Card";
+import { CartProvider } from "./components/context";
 
 function App() {
   return (
-    <div className="App">
-      <ToDoList />
-      <TableList />
-      <Counter />
-      <CardsGrid />
-      <HorizontalScroll />
-      <Modal />
-      <FetchUsers />
-      <FormValidation />
-    </div>
+    <CartProvider>
+      <Router>
+        {/* ToDoList ALWAYS visible */}
+        <ToDoList />
+        <Routes>
+          <Route path="/" element={<ShoppingCard />} />
+          <Route path="/cart" element={<Card />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 
